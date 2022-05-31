@@ -3,7 +3,7 @@
 ## departments
 id: PK
 name: VARCHAR(30) NOTNULL
-## degree_courses
+## faculty
 id: PK
 name:
 duration: TINYINT
@@ -34,12 +34,12 @@ phone_number:
 email:
 address:
 
-## sessions
+## ROUNDS
 id: PK
 typology:
 duration:
 
-## session_student
+## round_student
 student_id: PK
 student_id: PK
 grade: TINYINT
