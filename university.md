@@ -1,45 +1,54 @@
 # University_DB
 
-## departments
-id: PK
+## FEPARTEMENTS
+id: PK(BIGINT, NOTNULL, AI, INDEX, UNIQUE)
 name: VARCHAR(30) NOTNULL
-## faculty
-id: PK
-name:
-duration: TINYINT
-total_university_credits: VARCHAR(3)
+note: TEXT NULL
+## FACULTY
+id: PK(BIGINT, NOTNULL, AI, INDEX, UNIQUE)
+name: VARCHAR(30) NOTNULL
+duration: TINYINT NOTNULL
+total_university_credits: VARCHAR(3) NOTNULL
 
-## courses
-id: PK
-name:
-year: TINYINT
-language:
-university_credits: TINYINT
-total_hours: TINYINT
+## COURSES
+id: PK(BIGINT, NOTNULL, AI, INDEX, UNIQUE)
+name: VARCHAR(30) NOTNULL
+year: TINYINT NOTNULL
+language: VARCHAR(5) NOTNULL
+university_credits: TINYINT NOTNULL
+total_hours: TINYINT NOTNULL
 
-## teachers
-id: PK
-firstname:
-lastname:
-phone_number:
-email:
-address:
+# COURSE_FACULTY
+course_id: FK
+faculty_id: FK
 
-## students
-id: PK
-firstname:
-lastname:
-year:
-phone_number:
-email:
-address:
+## TEACHERS
+id: PK(BIGINT, NOTNULL, AI, INDEX, UNIQUE)
+firstname: VARCHAR(50) NOTNULL
+lastname: VARCHAR(50) NOTNULL
+phone_number: VARCHAR(11) NULL
+email: VARCHAR(50) NOTNULL
+address: VARCHAR(255) NOTNULL
+
+# COURSE_TEACHER
+course_id: FK
+teacher_id: FK
+
+## STUDENTS
+id: PK(BIGINT, NOTNULL, AI, INDEX, UNIQUE)
+firstname: VARCHAR(50) NOTNULL
+lastname: VARCHAR(50) NOTNULL
+year: TINYINT NOTNULL
+phone_number: VARCHAR(11) NULL
+email: VARCHAR(50) NOTNULL
+address: VARCHAR(255) NOTNULL
 
 ## ROUNDS
-id: PK
-typology:
-duration:
+id: PK(BIGINT, NOTNULL, AI, INDEX, UNIQUE)
+typology: VARCHAR(15) NOTNULL
+duration: TINYINT NOTNULL
 
-## round_student
+## ROUND_STUDENT
+round_id: PK
 student_id: PK
-student_id: PK
-grade: TINYINT
+grade: TINYINT NOTNULL
