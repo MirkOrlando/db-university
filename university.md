@@ -2,7 +2,7 @@
 
 ## departments
 id: PK
-name:
+name: VARCHAR(30) NOTNULL
 ## degree_courses
 id: PK
 name:
@@ -12,7 +12,7 @@ total_university_credits: VARCHAR(3)
 ## courses
 id: PK
 name:
-year: YEAR
+year: TINYINT
 language:
 university_credits: TINYINT
 total_hours: TINYINT
@@ -23,6 +23,7 @@ firstname:
 lastname:
 phone_number:
 email:
+address:
 
 ## students
 id: PK
@@ -31,12 +32,14 @@ lastname:
 year:
 phone_number:
 email:
+address:
 
-## exam_sessions
+## sessions
 id: PK
 typology:
 duration:
 
-## exam_grades
-id: PK
+## session_student
+student_id: PK
+student_id: PK
 grade: TINYINT
