@@ -21,3 +21,8 @@ WHERE `CFU` > 10;
 3. SELECT * 
 FROM `students` 
 WHERE year(from_days(DATEDIFF(CURRENT_DATE, `date_of_birth`))) >= 30;
+
+4. SELECT *
+FROM courses
+WHERE `period` = 'I semestre'
+AND `year` = 1;
