@@ -37,3 +37,7 @@ LIKE '2020-06-20';
 FROM `degrees`
 WHERE `level`
 LIKE 'magistrale';
+
+7. SELECT COUNT(id)
+AS departments_number
+FROM `departments`;
