@@ -17,3 +17,7 @@ WHERE `date_of_birth` LIKE '1990%';
 2. SELECT * 
 FROM `courses` 
 WHERE `CFU` > 10;
+
+3. SELECT * 
+FROM `students` 
+WHERE year(from_days(DATEDIFF(CURRENT_DATE, `date_of_birth`))) >= 30;
