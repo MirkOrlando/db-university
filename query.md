@@ -41,3 +41,7 @@ LIKE 'magistrale';
 7. SELECT COUNT(id)
 AS departments_number
 FROM `departments`;
+
+8. SELECT *
+FROM `teachers`
+WHERE `phone` IS NULL;
