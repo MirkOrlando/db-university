@@ -26,3 +26,9 @@ WHERE year(from_days(DATEDIFF(CURRENT_DATE, `date_of_birth`))) >= 30;
 FROM courses
 WHERE `period` = 'I semestre'
 AND `year` = 1;
+
+5. SELECT *
+FROM `exams`
+WHERE HOUR(`hour`) > 13
+AND `date`
+LIKE '2020-06-20';
