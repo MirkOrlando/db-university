@@ -12,6 +12,14 @@ GROUP BY `enrolment_year`;
 FROM `teachers` 
 GROUP BY `office_address`;
 
+3. SELECT `exam_id`, TRUNCATE(AVG(`vote`), 2) AS `vote_average` 
+FROM `exam_student` 
+GROUP BY `exam_id`;
+
+4. SELECT `department_id`, COUNT(`id`) AS `degrees_number`
+FROM `degrees`
+GROUP BY `department_id`;
+
 QUERY JOINS:
 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
 2. Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze
