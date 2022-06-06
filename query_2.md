@@ -68,3 +68,11 @@ JOIN `courses` ON `courses`.`id` = `course_teacher`.`course_id`
 JOIN `degrees` ON `degrees`.`id` = `courses`.`degree_id`
 JOIN `departments` ON `departments`.`id` = `degrees`.`department_id`
 ORDER BY `departments`.`name`;
+
+7. SELECT `students`.`surname`, `students`.`name`, `courses`.`name` AS `course_name`, COUNT(`exams`.`id`) AS `attempts_number`
+FROM `students`
+JOIN `exam_student` ON `students`.`id` = `exam_student`.`student_id`
+JOIN `exams` ON `exams`.`id` = `exam_student`.`exam_id`
+JOIN `courses` ON `courses`.`id` = `exams`.`course_id`
+GROUP BY `students`.`surname`, `students`.`name`, `courses`.`name`
+ORDER BY `students`.`surname`, `students`.`name`, `courses`.`name`;
