@@ -40,3 +40,10 @@ FROM `degrees`
 JOIN `departments` ON `departments`.`id` = `degrees`.`department_id` 
 WHERE `departments`.`name` = 'Dipartimento di Neuroscienze' 
 AND `degrees`.`level` = 'magistrale';
+
+3. SELECT `courses`.`name` AS `course_name`, `teachers`.`id` AS `teacher_id`, `teachers`.`name`, `teachers`.`surname` 
+FROM `course_teacher` 
+JOIN `teachers` ON `course_teacher`.`teacher_id` = `teachers`.`id` 
+JOIN `courses` on `course_teacher`.`course_id` = `courses`.`id` 
+WHERE `teachers`.`name` = 'Fulvio'
+AND `teachers`.`name` = 'Amato';
