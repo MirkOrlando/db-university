@@ -34,3 +34,9 @@ FROM `students`
 JOIN `degrees` ON `degrees`.`id` = `students`.`degree_id` 
 WHERE `degrees`.`name` = 'Corso di Laurea in Economia' 
 ORDER BY `students`.`surname`;
+
+2. SELECT `degrees`.`name` AS `degree_name`, `degrees`.`level`, `departments`.`name` AS `department_name`
+FROM `degrees`
+JOIN `departments` ON `departments`.`id` = `degrees`.`department_id` 
+WHERE `departments`.`name` = 'Dipartimento di Neuroscienze' 
+AND `degrees`.`level` = 'magistrale';
