@@ -47,3 +47,9 @@ JOIN `teachers` ON `course_teacher`.`teacher_id` = `teachers`.`id`
 JOIN `courses` on `course_teacher`.`course_id` = `courses`.`id` 
 WHERE `teachers`.`name` = 'Fulvio'
 AND `teachers`.`name` = 'Amato';
+
+4. SELECT `students`.`surname`, `students`.`name`, `degrees`.`name` AS `degree_name`, `departments`.`name` AS `department_name`
+FROM `students`
+JOIN `degrees` ON `degrees`.`id` = `students`.`degree_id`
+JOIN `departments` ON `departments`.`id` = `degrees`.`department_id`
+ORDER BY `students`.`surname`, `students`.`name`;
